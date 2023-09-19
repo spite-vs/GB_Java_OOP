@@ -15,4 +15,9 @@ public class Teacher extends Person {
     public void setAcadDegree(String acadDegree) {
         this.acadDegree = acadDegree;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "; acadDegree: " + acadDegree;
+    }
 }

@@ -2,9 +2,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import Controllers.AccountController;
+import Domen.PersonComparator;
 import Domen.Student;
 import Domen.StudentGroup;
 import Domen.StudentSteam;
+import Domen.Teacher;
+import Services.TeacherService;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -98,5 +102,26 @@ public class App {
         System.out.println(steam1);
         Collections.sort(steam1.getGroups());
         System.out.println(steam1);
+
+        // Teacher t1 = new Teacher("Галина", 55, "Docent");
+        // Teacher t2 = new Teacher("Татьяна", 57, "Docent");
+        // AccountController.paySalary(t1, 50000);
+        // System.out.println(new PersonComparator<Student>().compare(s1, s3));
+
+        // AccountController.paySalary(t2, 50000);
+
+        TeacherService teach = new TeacherService();
+        teach.create("Галина", 55);
+        teach.create("Татьяна", 57);
+        teach.create("Маргарита", 48);
+        teach.create("Анастасия", 40);
+        teach.create("Алевтина", 75);
+
+        teach.printSort();
+
+        System.out.println(
+                "Средний возраст группы " + group0001.getGroupId() + ": "
+                        + AccountController.averageAge(group0001.getGroup()));
+
     }
 }
