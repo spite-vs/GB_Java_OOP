@@ -40,8 +40,6 @@ public class App {
                 break;
 
         }
-        iScanner.close();
-
     }
 
 }
