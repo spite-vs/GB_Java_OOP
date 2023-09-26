@@ -16,7 +16,7 @@ public class ComNum {
         return imaginary;
     }
 
-    public ComNum add(ComNum other) {
+    public ComNum sum(ComNum other) {
         int sumMaterial = this.material + other.material;
         int sumImaginary = this.imaginary + other.imaginary;
         return new ComNum(sumMaterial, sumImaginary);

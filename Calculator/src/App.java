@@ -24,7 +24,7 @@ public class App {
 
         switch (oper) {
             case '+':
-                ComNum sum = cal.add(n1, n2);
+                ComNum sum = cal.sum(n1, n2);
                 System.out.println("Сумма: " + sum);
                 break;
             case '*':

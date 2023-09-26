@@ -7,8 +7,8 @@ public class ComCal implements iCalculator {
     }
 
     @Override
-    public ComNum add(ComNum n1, ComNum n2) {
-        ComNum result = n1.add(n2);
+    public ComNum sum(ComNum n1, ComNum n2) {
+        ComNum result = n1.sum(n2);
         log.log("Cложение: " + n1 + " + " + n2 + " = " + result);
         return result;
     }
